@@ -8,12 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		94DC761622454BC2009925D3 /* BlizzardAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 94DC761422454BC2009925D3 /* BlizzardAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94DC762322454C2F009925D3 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC762222454C2F009925D3 /* ParameterEncoder.swift */; };
+		94DC762522454C6F009925D3 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC762422454C6F009925D3 /* URLParameterEncoder.swift */; };
+		94DC762722454D7F009925D3 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC762622454D7F009925D3 /* NetworkError.swift */; };
+		94DC762922454DC4009925D3 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC762822454DC4009925D3 /* JSONParameterEncoder.swift */; };
+		94DC762B22454E51009925D3 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC762A22454E51009925D3 /* NetworkRouter.swift */; };
+		94DC762D22454EA2009925D3 /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC762C22454EA2009925D3 /* EndpointType.swift */; };
+		94DC762F22454EEE009925D3 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC762E22454EEE009925D3 /* HTTPMethod.swift */; };
+		94DC763122454F2A009925D3 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC763022454F2A009925D3 /* HTTPTask.swift */; };
+		94DC763322454F97009925D3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC763222454F97009925D3 /* Router.swift */; };
+		94DC7635224553C8009925D3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC7634224553C8009925D3 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		94DC761122454BC2009925D3 /* BlizzardAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlizzardAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DC761422454BC2009925D3 /* BlizzardAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlizzardAPI.h; sourceTree = "<group>"; };
 		94DC761522454BC2009925D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94DC762222454C2F009925D3 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
+		94DC762422454C6F009925D3 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		94DC762622454D7F009925D3 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		94DC762822454DC4009925D3 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		94DC762A22454E51009925D3 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		94DC762C22454EA2009925D3 /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		94DC762E22454EEE009925D3 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		94DC763022454F2A009925D3 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		94DC763222454F97009925D3 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		94DC7634224553C8009925D3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +66,68 @@
 		94DC761322454BC2009925D3 /* BlizzardAPI */ = {
 			isa = PBXGroup;
 			children = (
+				94DC761C22454BD7009925D3 /* Model */,
+				94DC761D22454BE1009925D3 /* Networking */,
 				94DC761422454BC2009925D3 /* BlizzardAPI.h */,
 				94DC761522454BC2009925D3 /* Info.plist */,
 			);
 			path = BlizzardAPI;
+			sourceTree = "<group>";
+		};
+		94DC761C22454BD7009925D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		94DC761D22454BE1009925D3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				94DC762122454C08009925D3 /* Encoding */,
+				94DC762022454BFE009925D3 /* Endpoint */,
+				94DC761F22454BF7009925D3 /* Manager */,
+				94DC761E22454BEE009925D3 /* Service */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		94DC761E22454BEE009925D3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				94DC762C22454EA2009925D3 /* EndpointType.swift */,
+				94DC762E22454EEE009925D3 /* HTTPMethod.swift */,
+				94DC763022454F2A009925D3 /* HTTPTask.swift */,
+				94DC762622454D7F009925D3 /* NetworkError.swift */,
+				94DC762A22454E51009925D3 /* NetworkRouter.swift */,
+				94DC763222454F97009925D3 /* Router.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		94DC761F22454BF7009925D3 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				94DC7634224553C8009925D3 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		94DC762022454BFE009925D3 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		94DC762122454C08009925D3 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				94DC762222454C2F009925D3 /* ParameterEncoder.swift */,
+				94DC762422454C6F009925D3 /* URLParameterEncoder.swift */,
+				94DC762822454DC4009925D3 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +173,7 @@
 				TargetAttributes = {
 					94DC761022454BC2009925D3 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -130,6 +209,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94DC762922454DC4009925D3 /* JSONParameterEncoder.swift in Sources */,
+				94DC762722454D7F009925D3 /* NetworkError.swift in Sources */,
+				94DC7635224553C8009925D3 /* NetworkManager.swift in Sources */,
+				94DC762F22454EEE009925D3 /* HTTPMethod.swift in Sources */,
+				94DC762D22454EA2009925D3 /* EndpointType.swift in Sources */,
+				94DC763322454F97009925D3 /* Router.swift in Sources */,
+				94DC763122454F2A009925D3 /* HTTPTask.swift in Sources */,
+				94DC762B22454E51009925D3 /* NetworkRouter.swift in Sources */,
+				94DC762522454C6F009925D3 /* URLParameterEncoder.swift in Sources */,
+				94DC762322454C2F009925D3 /* ParameterEncoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +350,7 @@
 		94DC761A22454BC2009925D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -278,6 +368,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.werureo.BlizzardAPI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,6 +377,7 @@
 		94DC761B22454BC2009925D3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
